@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      appBar: AppBar(
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
         backgroundColor: Color(0xff009788),
         title: Text("🛍️ List of Fruits",
         style: TextStyle(
@@ -13,65 +15,53 @@ void main(){
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          children: [
-            Text("\n\n\n\n🍎Apple",
-            style: TextStyle(
+        child: RichText(
+          text: TextSpan(
+            text: "🍎Apple\n", style:TextStyle(
               color: Colors.red,
-              fontSize: 24,
-              fontWeight: FontWeight.w600
-            ),),
-            Text("🍇Grapes",
-            style: TextStyle(
-              color: Color(0xff660E78),
-              fontSize: 24,
-              fontWeight: FontWeight.w600
-            ),),
-             Text("🍒Cherry",
-            style: TextStyle(
-              color: Color(0xffA62AC3),
-              fontSize: 24,
-              fontWeight: FontWeight.w600
-            ),),
-            Text("🍓Strawberry",
-            style: TextStyle(
-              color: Color(0xff952146),
-              fontSize: 24,
-              fontWeight: FontWeight.w600
-            ),),
-            Text("🥭Mango",
-            style: TextStyle(
-              color: Color(0xffFF7B00),
-              fontSize: 24,
-              fontWeight: FontWeight.w600
-            ),),
-            Text("🍍Pineapple",
-            style: TextStyle(
-              color: Color(0xff3FBE41),
-              fontSize: 24,
-              fontWeight: FontWeight.w600
-            ),),
-            Text("🍋Lemon",
-            style: TextStyle(
-              color: Color(0xffFFB200),
-              fontSize: 24,
-              fontWeight: FontWeight.w600
-            ),),
-            Text("🍉Watermelon",
-            style: TextStyle(
-              color: Color(0xff83BE21),
-              fontSize: 24,
-              fontWeight: FontWeight.w600
-            ),),
-            Text("🥥Coconut",
-            style: TextStyle(
-              color: Color(0xff7C483E),
-              fontSize: 24,
-              fontWeight: FontWeight.w600
-            ),),
-          ],
-        ),
+              fontSize: 26,
+              fontWeight: FontWeight.w400),
+                children: const <TextSpan>[
+                   TextSpan(
+                    text:"🍇Grapes\n",
+                    style: TextStyle(color: Color(0xff660E78),
+                    fontWeight: FontWeight.w400),),
+                  TextSpan(
+                    text:"🍒Cherry\n",
+                    style: TextStyle(color: Color(0xff9C27B0),
+                    fontWeight: FontWeight.w400),),
+                  TextSpan(
+                    text:"🍓Strawberry\n",
+                    style: TextStyle(color: Color(0xff952146),
+                    fontWeight: FontWeight.w400),),
+                  TextSpan(
+                    text:"🥭Mango\n",
+                    style: TextStyle(color: Color(0xffFF7B00),
+                    fontWeight: FontWeight.w400),),
+                  TextSpan(
+                    text:"🍍Pineapple\n",
+                    style: TextStyle(
+                      color: Color(0xff4CAF50),
+                      fontWeight: FontWeight.w400),),
+                  TextSpan(
+                    text:"🍋Lemon\n",
+                    style: TextStyle(
+                      color: Color(0xffFFC107),
+                      fontWeight: FontWeight.w400),),
+                  TextSpan(
+                    text:"🍉Watermelon\n",
+                    style: TextStyle(
+                      color: Color(0xff8BC34A),
+                      fontWeight: FontWeight.w400),),
+                  TextSpan(
+                    text:"🥥Coconut\n",
+                    style: TextStyle(
+                      color: Color(0xff795548),
+                      fontWeight: FontWeight.w400),),
+                ]
+        )),
       ),
-    ),
-  ));
+      ),
+    )
+  );
 }
